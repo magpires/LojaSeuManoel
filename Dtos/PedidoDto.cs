@@ -8,7 +8,7 @@ namespace Dtos
 {
     public class PedidoDto
     {
-        public int Pedido_id { get; set; }
-        public IEnumerable<ProdutoDto> Produtos { get; set; } = new List<ProdutoDto>();
+        public int Pedido_Id { get; set; }
+        public ProdutoDto[] Produtos { get; set; } = Array.Empty<ProdutoDto>();
     }
 }

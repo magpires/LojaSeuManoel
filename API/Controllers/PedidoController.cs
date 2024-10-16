@@ -20,9 +20,15 @@ namespace API.Controllers
         [AllowAnonymous]
         public IActionResult ProcessaListaPedidos(RequisicaoPedidosDto requisicaoPedidosDto)
         {
-            var response =  _servico.ProcessaListaPedidos(requisicaoPedidosDto);
-
-            return Ok(response);
+            try
+            {
+                var response = _servico.ProcessaListaPedidos(requisicaoPedidosDto);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { Erro = e.Message });
+            }
         }
     }
 }

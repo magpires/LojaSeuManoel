@@ -8,7 +8,7 @@ namespace Dtos
 {
     public class ProdutoDto
     {
-        public string Produto_id { get; set; } = string.Empty;
+        public string Produto_Id { get; set; } = string.Empty;
         public DimensoesDto Dimensoes { get; set; } = new DimensoesDto();
     }
 }

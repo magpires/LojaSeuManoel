@@ -13,6 +13,7 @@ namespace Servicos
     {
         public RespostaPedidosViewModel ProcessaListaPedidos(RequisicaoPedidosDto requisicaoPedidosDto)
         {
+            requisicaoPedidosDto.Valida();
             return new RespostaPedidosViewModel();
         }
     }
